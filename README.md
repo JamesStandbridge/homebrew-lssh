@@ -10,6 +10,11 @@ Before using this script, ensure you have the following installed on your system
 - inquirer: You can install it using `pip install inquirer`
 - sshpass: You can install it based on your operating system.
 
+```bash
+pip install inquirer
+brew install hudochenkov/sshpass/sshpass
+```
+
 ## Installation
 
 To install `lssh` via Homebrew, follow these steps:
@@ -19,7 +24,7 @@ To install `lssh` via Homebrew, follow these steps:
 First, tap the repository to get access to the `lssh` formula.
 
 ```sh
-$ brew tap JamesStandbridge/homebrew-lssh
+brew tap JamesStandbridge/homebrew-lssh
 ```
 
 ### Install LSSH
@@ -27,7 +32,7 @@ $ brew tap JamesStandbridge/homebrew-lssh
 After tapping the repository, you can install `lssh` using the following command:
 
 ```bash
-$ brew install lssh
+brew install lssh
 ```
 
 ## Usage
@@ -37,7 +42,7 @@ To use `lssh`, simply type `lssh` in your terminal. This will bring up the conne
 To add a new connection, use:
 
 ```bash
-$ lssh --add
+lssh --add
 ```
 
 ## Troubleshooting
@@ -49,7 +54,7 @@ If you encounter any issues during installation or while using `lssh`, here are 
 If you get a `command not found` error after installation, try relinking:
 
 ```bash
-$ brew link lssh
+brew link lssh
 ```
 
 ### Python Environment Issues
@@ -71,8 +76,8 @@ Make sure to replace `/path/to/lssh.py` with the actual path to `lssh.py`.
 To update `lssh` to the latest version, run:
 
 ```bash
-$ brew update
-$ brew upgrade lssh
+brew update
+brew upgrade lssh
 ```
 
 ## Support
