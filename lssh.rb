@@ -4,8 +4,6 @@ class Lssh < Formula
     url "https://github.com/JamesStandbridge/lssh-command/archive/refs/tags/v2.0.0.tar.gz"
     sha256 "e692874c8263df0b2ff42b6b015631c7d508db6fad84b360aa9ead65cb61c09d"
   
-    include Language::Python::Virtualenv
-  
     resource "cryptography" do
         url "https://files.pythonhosted.org/packages/ce/b3/13a12ea7edb068de0f62bac88a8ffd92cc2901881b391839851846b84a81/cryptography-41.0.7.tar.gz"
         sha256 "13f93ce9bea8016c253b34afc6bd6a75993e5c40672ed5405a9c832f0d4a00bc"
@@ -18,12 +16,5 @@ class Lssh < Formula
 
     depends_on "python@3.9"
     depends_on "hudochenkov/sshpass/sshpass"
-
-    def install
-        virtualenv_install_with_resources using: "python@3.9"
-
-        bin.install "lssh.py"
-        bin.install_symlink "#{bin}/lssh.py" => "lssh"
-    end
 end
   
