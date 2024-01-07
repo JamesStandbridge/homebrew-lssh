@@ -4,9 +4,6 @@ class Lssh < Formula
     url "https://github.com/JamesStandbridge/lssh-command/archive/refs/tags/v2.0.0.tar.gz"
     sha256 "e692874c8263df0b2ff42b6b015631c7d508db6fad84b360aa9ead65cb61c09d"
 
-    # Python dependency
-    depends_on "python@3.x"
-
     # Python packages
     resource "cryptography" do
         url "https://files.pythonhosted.org/packages/[...]/cryptography-[...].tar.gz"
