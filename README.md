@@ -1,85 +1,51 @@
-# Homebrew LSSH
+# Homebrew Tap for LSSH
 
-This is the Homebrew tap for `lssh`, a simple SSH Connection Manager written in Python. It allows you to manage your SSH connections with ease.
+## Introduction
 
-## Prerequisites
-
-Before using this script, ensure you have the following installed on your system:
-
-- Python 3
-- inquirer: You can install it using `pip install inquirer`
-- sshpass: You can install it based on your operating system.
-
-```bash
-pip install inquirer
-brew install hudochenkov/sshpass/sshpass
-```
+This repository is a Homebrew tap for `LSSH`, a command-line SSH Connection Manager. `LSSH` simplifies the process of managing SSH connections by allowing users to securely store, retrieve, and manage SSH connection details in an encrypted format.
 
 ## Installation
 
-To install `lssh` via Homebrew, follow these steps:
+### Tapping the Repository
 
-### Tap the Repository
+First, tap this repository to add it to your list of formulae:
 
-First, tap the repository to get access to the `lssh` formula.
-
-```sh
+```bash
 brew tap JamesStandbridge/homebrew-lssh
 ```
 
-### Install LSSH
+### Installing LSSH
 
-After tapping the repository, you can install `lssh` using the following command:
+Once the repository is tapped, you can install `LSSH` using:
 
 ```bash
 brew install lssh
 ```
 
+This command will install `LSSH` along with its Python dependencies and `sshpass` for non-interactive SSH login.
+
 ## Usage
 
-To use `lssh`, simply type `lssh` in your terminal. This will bring up the connection manager where you can select from saved connections or add new ones.
+After installation, you can run `LSSH` using the `lssh` command:
 
-To add a new connection, use:
-
-```bash
-lssh --add
-```
-
-## Troubleshooting
-
-If you encounter any issues during installation or while using `lssh`, here are some common troubleshooting steps:
-
-### Command Not Found
-
-If you get a `command not found` error after installation, try relinking:
+bashCopy code
 
 ```bash
-brew link lssh
+lssh --add # To add a new SSH connection
+lssh --delete # To delete an existing SSH connection
+lssh --init # To initialize the encrypted storage
 ```
 
-### Python Environment Issues
+For more detailed usage instructions, please refer to the [LSSH comand documentation](https://github.com/JamesStandbridge/lssh-command).
 
-If `lssh` complains about Python not being found, ensure that Python 3 is installed on your system and that the shebang line in `lssh.py` points to the correct Python executable.
+## Contributing
 
-### Permission Issues
+We welcome contributions to the `LSSH` formula. If you have suggestions for improvements or encounter any issues, please open an issue or submit a pull request in this repository.
 
-Ensure that `lssh.py` is executable. You may need to change the permissions:
+## License
 
-```bash
-$ chmod +x /path/to/lssh.py
-```
+MIT
 
-Make sure to replace `/path/to/lssh.py` with the actual path to `lssh.py`.
+## Author
 
-## Updates
-
-To update `lssh` to the latest version, run:
-
-```bash
-brew update
-brew upgrade lssh
-```
-
-## Support
-
-For support, issues, or feature requests, please open an issue on the GitHub repository.
+james.standbridge.git@gmail.com
