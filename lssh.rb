@@ -15,12 +15,13 @@ class Lssh < Formula
         url "https://files.pythonhosted.org/packages/87/7a/acbfd27542c5d87d1ee025cd54a7d9923f57d0a89d8d16f526a622237981/inquirer-3.2.1.tar.gz"
         sha256 "d5ff9bb8cd07bd3f076eabad8ae338280886e93998ff10461975b768e3854fbc"
     end
-    
+
+    depends_on "python@3.9"
     depends_on "hudochenkov/sshpass/sshpass"
 
     def install
-        virtualenv_install_with_resources
-    
+        virtualenv_install_with_resources using: "python@3.9"
+
         bin.install "lssh.py"
         bin.install_symlink "#{bin}/lssh.py" => "lssh"
     end
