@@ -16,5 +16,10 @@ class Lssh < Formula
 
     depends_on "python@3.9"
     depends_on "hudochenkov/sshpass/sshpass"
+
+    def install
+        bin.install "lssh.py"
+        bin.install_symlink "#{bin}/lssh.py" => "lssh"
+    end
 end
   
